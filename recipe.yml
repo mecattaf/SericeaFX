@@ -32,4 +32,3 @@ firstboot:
     - org.desmume.DeSmuME
     - io.mgba.mGBA
     - org.videolan.VLC
-    - io.bassi.Amberol
