@@ -1,4 +1,4 @@
-name: SericeaFX
+name: sericeafx
 
 base-image: quay.io/fedora-ostree-desktops/sericea
 
