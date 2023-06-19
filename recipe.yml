@@ -13,17 +13,17 @@ rpm:
   repos:
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%FEDORA_VERSION%/swayfx-swayfx-fedora-%FEDORA_VERSION%.repo
 
-  install:
-    - python3-pip
-    - libadwaita
-    - swayfx
-    # - THOMAS this is where all the packages go  
-
   remove:
     - firefox
     - firefox-langpacks
     - sway
     # - THOMAS remove unwanted packages from here
+
+  install:
+    - python3-pip
+    - libadwaita
+    - swayfx
+    # - THOMAS this is where all the packages go  
 
 firstboot:
   yafti: true
