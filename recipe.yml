@@ -17,7 +17,8 @@ rpm:
     - firefox
     - firefox-langpacks
     - sway
-    - sway-config
+    - sway-config-fedora
+    # -sway-systemd
     # - THOMAS remove unwanted packages from here
 
   install:
