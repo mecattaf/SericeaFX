@@ -17,6 +17,7 @@ rpm:
     - firefox
     - firefox-langpacks
     - sway
+    - sway-config
     # - THOMAS remove unwanted packages from here
 
   install:
