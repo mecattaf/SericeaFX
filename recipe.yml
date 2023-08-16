@@ -39,7 +39,32 @@ rpm:
     #- imv
     #- zathura
     #- wlr-randr
-    # - THOMAS this is where all the packages go  
+    - alacritty
+    - clipman
+    - gammastep
+    - light
+    - grim
+    - mako
+    - ranger
+    - remmina
+    - libseat
+    - slurp
+    #- swaybg
+    #- waybar
+    #- wayland-devel
+    - wayvnc
+    - wl-clipboard
+    #- wlroots
+    #- wlroots-devel
+    - zathura
+    - zathura-pdf-poppler
+    - kanshi
+    - swappy
+    #- swayidle
+    - fzf
+    - azote
+    - bluez-tools
+    #- wev
 
 firstboot:
   yafti: true
