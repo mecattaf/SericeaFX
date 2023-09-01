@@ -23,6 +23,8 @@ rpm:
     - virtualbox-guest-additions
     - dunst
     - toolbox
+    - foot
+    - thunar
     # -sway-systemd
     # - THOMAS remove unwanted packages from here
 
@@ -31,14 +33,10 @@ rpm:
     - libadwaita
     - swayfx
     - mako
-    #- git
-    #- fish
-    #- distrobox
-    #- lxpolkit
-    #- alacritty
-    #- imv
-    #- zathura
-    #- wlr-randr
+    - git
+    - fish
+    - distrobox
+    - lxpolkit
     - alacritty
     - clipman
     - gammastep
@@ -49,18 +47,13 @@ rpm:
     - remmina
     - libseat
     - slurp
-    #- swaybg
-    #- waybar
-    #- wayland-devel
     - wayvnc
     - wl-clipboard
-    #- wlroots
-    #- wlroots-devel
     - zathura
     - zathura-pdf-poppler
     - kanshi
     - swappy
-    #- swayidle
+    - swayidle
     - fzf
     - azote
     - bluez-tools
@@ -70,6 +63,7 @@ firstboot:
   yafti: true
   flatpaks:
     - com.google.Chrome
+    - org.gnome.Nautilus
     - org.desmume.DeSmuME
     - io.mgba.mGBA
     - org.videolan.VLC
