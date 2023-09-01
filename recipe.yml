@@ -12,6 +12,8 @@ scripts:
 rpm:
   repos:
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%FEDORA_VERSION%/swayfx-swayfx-fedora-%FEDORA_VERSION%.repo
+    - https://repo.charm.sh/yum/fedora-%FEDORA_VERSION%/charm-fedora-%FEDORA_VERSION%.repo
+
 
   remove:
     - firefox
@@ -32,6 +34,7 @@ rpm:
     - python3-pip
     - libadwaita
     - swayfx
+    - charm
     - mako
     - fish
     - distrobox
@@ -46,8 +49,7 @@ rpm:
     - slurp
     - wayvnc
     - wl-clipboard
-    - zathura
-    - zathura-pdf-poppler
+    - neovim
     - kanshi
     - swappy
     - fzf
