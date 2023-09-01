@@ -34,7 +34,7 @@ rpm:
     - python3-pip
     - libadwaita
     - swayfx
-    - charm
+    - glow
     - mako
     - fish
     - distrobox
