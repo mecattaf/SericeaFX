@@ -12,8 +12,6 @@ scripts:
 rpm:
   repos:
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%FEDORA_VERSION%/swayfx-swayfx-fedora-%FEDORA_VERSION%.repo
-    - https://repo.charm.sh/yum/fedora-%FEDORA_VERSION%/charm-fedora-%FEDORA_VERSION%.repo
-
 
   remove:
     - firefox
@@ -55,6 +53,8 @@ rpm:
     - fzf
     - azote
     - bluez-tools
+    - tailscale
+    - charm
     #- wev
 
 firstboot:
