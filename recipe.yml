@@ -24,7 +24,7 @@ rpm:
     - dunst
     - toolbox
     - foot
-    - thunar
+    # - thunar
     # -sway-systemd
     # - THOMAS remove unwanted packages from here
 
