@@ -33,7 +33,6 @@ rpm:
     - libadwaita
     - swayfx
     - mako
-    - git
     - fish
     - distrobox
     - lxpolkit
@@ -43,9 +42,7 @@ rpm:
     - light
     - grim
     - mako
-    - ranger
     - remmina
-    - libseat
     - slurp
     - wayvnc
     - wl-clipboard
