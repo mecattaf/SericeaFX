@@ -39,3 +39,7 @@ RUN chmod +x /tmp/scripts/build.sh && \
         /tmp/scripts/build.sh && \
         rm -rf /tmp/* /var/* && \
         ostree container commit
+
+# SericeaFX Addition to add custom repos
+COPY etc/yum.repos.d/ /etc/yum.repos.d/
+RUN rm -f /etc/yum.repos.d/tailscale.repo && \
