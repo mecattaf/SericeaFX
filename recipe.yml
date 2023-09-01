@@ -12,6 +12,8 @@ scripts:
 rpm:
   repos:
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%FEDORA_VERSION%/swayfx-swayfx-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+
 
   remove:
     - firefox
@@ -32,7 +34,7 @@ rpm:
     - python3-pip
     - libadwaita
     - swayfx
-    - glow
+    - starship
     - mako
     - fish
     - distrobox
@@ -54,7 +56,7 @@ rpm:
     - azote
     - bluez-tools
     - tailscale
-    - charm
+    - glow
     - code-insiders
     #- wev
 
