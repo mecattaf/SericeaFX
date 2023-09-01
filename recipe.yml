@@ -55,6 +55,7 @@ rpm:
     - bluez-tools
     - tailscale
     - charm
+    - code-insiders
     #- wev
 
 firstboot:
