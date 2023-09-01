@@ -23,6 +23,7 @@ ARG RECIPE=./recipe.yml
 # for manual overrides and editing by the machine's admin AFTER installation!
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
+COPY etc /etc
 
 # Copy the recipe that we're building.
 COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
@@ -39,7 +40,3 @@ RUN chmod +x /tmp/scripts/build.sh && \
         /tmp/scripts/build.sh && \
         rm -rf /tmp/* /var/* && \
         ostree container commit
-
-# SericeaFX Addition to add custom repos
-COPY etc/yum.repos.d/ /etc/yum.repos.d/
-RUN rm -f /etc/yum.repos.d/tailscale.repo && \
