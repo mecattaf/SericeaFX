@@ -81,19 +81,16 @@ If you want to completely disable yafti, simply set the recipe's `firstboot.yaft
 
 ## Installation
 
-> **Warning**
-> This is an experimental feature and should not be used in production, try it in a VM for a while!
-
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 ```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/startingpoint:latest
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sericeafx:latest
 ```
 
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/startingpoint:20230403
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sericeafx:20230403
 ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
@@ -136,30 +133,6 @@ These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosi
     cosign verify --key cosign.pub ghcr.io/mecattaf/SericeaFX
 
 If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
-
-## Setup
-
-### Rebase
-
-1. `rpm-ostree reset` will remove all your layered packages and prepare for rebasing. 
-2. Rebase to an *unsigned* Universal Blue image, this will ensure that you have the proper keys and policies on your machine:
-
-        rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/silverblue-nvidia
-3. Rebase onto Next:
-
-        rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mecattaf/next:latest     
-
-### Install extensions
-
-Beyond comes with some GNOME extensions to tailor the desktop experience. For now, **you must manually install them (https://github.com/ublue-os/beyond/issues/74)**.
-
-1. Open Console and run:
-
-   ```shell
-   just install-next-extensions
-   ```
-
-2. Log out and back in (or restart your computer) to ensure the extensions are running
 
 ### To revert back to Silverblue
 
