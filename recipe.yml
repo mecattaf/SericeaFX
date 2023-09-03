@@ -1,4 +1,4 @@
-name: next
+name: sericeafx
 
 base-image: ghcr.io/ublue-os/silverblue-main
 
