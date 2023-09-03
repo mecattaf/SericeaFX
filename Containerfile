@@ -23,7 +23,6 @@ ARG RECIPE=./recipe.yml
 # for manual overrides and editing by the machine's admin AFTER installation!
 # See issue #28 (https://github.com/ublue-os/startingpoint/issues/28).
 COPY usr /usr
-COPY etc /etc
 
 # Copy the recipe that we're building.
 COPY ${RECIPE} /usr/share/ublue-os/recipe.yml
