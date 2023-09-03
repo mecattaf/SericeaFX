@@ -1,10 +1,10 @@
 name: sericeafx
 
-base-image: quay.io/fedora-ostree-desktops/sericea
+base-image: quay.io/fedora-ostree-desktops/silverblue-main
 
 fedora-version: 38
 
-description: Lightweight immutable desktop based on ublue-os and fedora sericea
+description: Lightweight immutable desktop based on ublue-os and fedora silverblue
 
 scripts:
     # - example.sh
@@ -13,20 +13,13 @@ rpm:
   repos:
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%FEDORA_VERSION%/swayfx-swayfx-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-
+    - https://copr.fedorainfracloud.org/coprs/tokariew/glow/repo/fedora-%FEDORA_VERSION%/tokariew-glow-fedora-%FEDORA_VERSION%.repo
 
   remove:
     - firefox
     - firefox-langpacks
-    - sway
-    - sway-config-fedora
-    - rofi-wayland
-    - rofi-themes
     - virtualbox-guest-additions
-    - dunst
     - toolbox
-    - foot
-    # - thunar
     # -sway-systemd
     # - THOMAS remove unwanted packages from here
 
@@ -48,6 +41,7 @@ rpm:
     - remmina
     - slurp
     - wayvnc
+    - waybar
     - wl-clipboard
     - neovim
     - kanshi
@@ -55,16 +49,12 @@ rpm:
     - fzf
     - azote
     - bluez-tools
-    - tailscale
     - glow
-    - code-insiders
-    #- wev
 
 firstboot:
   yafti: true
   flatpaks:
     - com.google.Chrome
-    - org.gnome.Nautilus
     - org.desmume.DeSmuME
     - io.mgba.mGBA
     - org.videolan.VLC
