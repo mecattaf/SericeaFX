@@ -1,10 +1,10 @@
-name: sericeafx
+name: next
 
 base-image: ghcr.io/ublue-os/silverblue-main
 
 fedora-version: 38
 
-description: Lightweight immutable desktop based on ublue-os and fedora silverblue
+description: Personal Linux OS based on swayfx and fedora silverblue
 
 scripts:
     # - example.sh
