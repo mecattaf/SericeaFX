@@ -59,6 +59,7 @@ rpm:
     - blueman
     - bluez-tools
     - glow
+    - task
 
 firstboot:
   yafti: true
