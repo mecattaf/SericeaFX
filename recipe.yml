@@ -20,7 +20,7 @@ rpm:
     - firefox-langpacks
     - virtualbox-guest-additions
     - toolbox
-    # -sway-systemd
+    - nvtop
     # - THOMAS remove unwanted packages from here
 
   install:
@@ -32,6 +32,7 @@ rpm:
     - fish
     - distrobox
     - lxpolkit
+    - polkit-gnome
     - alacritty
     - clipman
     - gammastep
@@ -48,6 +49,14 @@ rpm:
     - swappy
     - fzf
     - azote
+    - udiskie
+    - network-manager-applet
+    - xdg-desktop-portal
+    - xdg-desktop-portal-wlr
+    - xdg-user-dirs
+    - gnome-keyring
+    - gh
+    - blueman
     - bluez-tools
     - glow
 
@@ -57,4 +66,5 @@ firstboot:
     - com.google.Chrome
     - org.desmume.DeSmuME
     - io.mgba.mGBA
+    - io.github.realmazharhussain.GdmSettings
     - org.videolan.VLC
