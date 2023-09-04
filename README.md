@@ -1,22 +1,23 @@
-# Starting point
+# Introduction
 
 [![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
 
-This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
-
-For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
-
-## Getting started
-
+This is my personal linux config based on uBlue Linux. For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
 See the [Make Your Own -page in the documentation](https://ublue.it/making-your-own/) for quick setup instructions for setting up your own repository based on this template.
 
-Don't worry, it only requires some basic knowledge about using the terminal and git.
+## Installation
 
-> **Note**
-> Everywhere in this repository, make sure to replace `ublue-os/startingpoint` with the details of your own repository. Unless you used [`create-ublue-image`](https://github.com/EinoHR/create-ublue-image), in which case the previous repo identifier should already be your repo's details.
+To rebase an existing Silverblue/Kinoite installation to the latest build:
 
-> **Warning**
-> To start, you *must* create a branch called `live` which is exclusively for your customizations. That is the **only** branch the GitHub workflow will deploy to your container registry. Don't make any changes to the original "template" branch. It should remain untouched. By using this branch structure, you ensure a clear separation between your own "published image" branch, your development branches, and the original upstream "template" branch. Periodically sync and fast-forward the upstream "template" branch to the most recent revision. Then, simply rebase your `live` branch onto the updated template to effortlessly incorporate the latest improvements into your own repository, without the need for any messy, manual "merge commits".
+```
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sora:latest
+```
+
+This repository builds date tags as well, so if you want to rebase to a particular day's build:
+
+```
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sora:20230403
+```
 
 ## Customization
 
@@ -46,31 +47,7 @@ COPR is like the Arch User Repository for Fedora, where you can find extra packa
 
 Tip: You can use the magic string `%FEDORA_VERSION%` in your repo URLs, to automatically refer to the correct repository for your current Fedora version.
 
-### Building multiple images
-
-You can build multiple images using multiple `recipe.yml` files. They will share the Containerfile and everything else, but things like packages declared in the recipe will be different between the images. For a more robust multibuild setup, you could consider forking from the [ublue-os/main](https://github.com/ublue-os/main/) repo, which was built from the purpose.
-
-In order to build multiple recipes, you need to declare each one below line ~33 in `build.yml`. The files should be in the root of the repository.
-
-Example: Adding a new recipe called `recipe-2.yml` (snippets from the `matrix` section of `build.yml`)
-
-Before:
-
-```yml
-matrix:
-  recipe:
-    - recipe.yml
-```
-
-After:
-
-```yml
-matrix:
-  recipe:
-    - recipe.yml
-    - recipe-2.yml
-```
-
+#
 ### [yafti](https://github.com/ublue-os/yafti/)
 
 `yafti` is the uBlue "first boot" installer. It shows up the first time a user logs into uBlue. By default, the menu also shows up again anytime the image's yafti configuration differs from the user's last encounter, so feel free to expand or modify your custom image's yafti configuration over time. Your users will then see the yafti menu again after the OS update, and will be given a chance to install any new additions.
@@ -78,20 +55,6 @@ matrix:
 Its configuration can be found in `/usr/share/ublue-os/firstboot/yafti.yml` of the installed OS. It includes an optional selection of Flatpaks to install, along with a new group that's automatically added for all Flatpaks declared in `recipe.yml`. You can look at what's done in the `yafti.yml` config and modify it to your liking (in the repository, before building the image, since the installed system file is immutable).
 
 If you want to completely disable yafti, simply set the recipe's `firstboot.yafti` flag to `false`, which then removes all yafti-related files and configurations from your final image. The files in `usr/share/ublue-os/firstboot/` are responsible for automatically running yafti at login, and they will *only* be bundled in your image if `yafti` is enabled in your recipe!
-
-## Installation
-
-To rebase an existing Silverblue/Kinoite installation to the latest build:
-
-```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sericeafx:latest
-```
-
-This repository builds date tags as well, so if you want to rebase to a particular day's build:
-
-```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sericeafx:20230403
-```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
