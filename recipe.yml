@@ -1,5 +1,4 @@
-name: sericeafx
-
+name: sora
 base-image: ghcr.io/ublue-os/silverblue-main
 
 fedora-version: 38
