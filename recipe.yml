@@ -42,6 +42,7 @@ rpm:
     - slurp
     - wayvnc
     - waybar
+    - remmina
     - wl-clipboard
     - neovim
     - kanshi
