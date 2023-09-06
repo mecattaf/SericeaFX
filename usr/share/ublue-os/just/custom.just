@@ -3,7 +3,6 @@ setup-sora:
   just fonts
   just cursors
   just wallpapers
-  just base16
 
 dotfiles:
   # Clone and deploy dotfiles
@@ -15,11 +14,6 @@ dotfiles:
   cp -r ~/dotfiles/config/* ~/.config/
   cp -r ~/dotfiles/theme/* ~/.themes/
   rm -rf ~/dotfiles
-  
-  # Install Rust using rustup
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  # Install Rust crates
-  cargo install flavours
 
 fonts:
   # Download and setup the font
@@ -45,13 +39,6 @@ wallpapers:
   cp -r ~/.wallpapers/* ~/.local/share/wallpapers/
   rm -rf ~/.wallpapers
 
-base16:
-  # Clone and deploy base16 themes
-  git clone https://github.com/mecattaf/base16 ~/.base16
-  mkdir -p ~/.local/share/base16/
-  cp -r ~/.base16/* ~/.local/share/base16/
-  rm -rf ~/.base16
-
 
 setup-flatpaks:
   #!/usr/bin/env bash
@@ -61,27 +48,3 @@ setup-flatpaks:
       echo "Installing: ${pkg}" && \
       flatpak install --user --noninteractive flathub $pkg; \
   done
-
-setup-gaming:
-  echo 'Setting up gaming experience ... lock and load.'
-  flatpak install -y --user \\
-  com.discordapp.Discord \\
-  com.feaneron.Boatswain \\
-  org.freedesktop.Platform.VulkanLayer.MangoHud//22.08 \\
-  org.freedesktop.Platform.VulkanLayer.OBSVkCapture//22.08 \\
-  org.freedesktop.Platform.VulkanLayer.vkBasalt//22.08 \\
-  com.heroicgameslauncher.hgl \\
-  com.obsproject.Studio \\
-  com.obsproject.Studio.Plugin.OBSVkCapture \\
-  com.obsproject.Studio.Plugin.Gstreamer \\
-  com.usebottles.bottles \\
-  com.valvesoftware.Steam \\
-  com.valvesoftware.Steam.Utility.gamescope \\
-  net.davidotek.pupgui2
-  flatpak override com.usebottles.bottles --user --filesystem=xdg-data/applications 
-  flatpak override --user --env=MANGOHUD=1 com.valvesoftware.Steam 
-  flatpak override --user --env=MANGOHUD=1 com.heroicgameslauncher.hgl 
-
-nix-me-up:
-  echo 'Setting phasers to kill. Installing nix.'
-  /usr/bin/ublue-nix-install
