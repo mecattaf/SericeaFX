@@ -59,7 +59,6 @@ rpm:
     - blueman
     - bluez-tools
     - glow
-    - task
     - zathura
     - zathura-pdf-poppler
 
