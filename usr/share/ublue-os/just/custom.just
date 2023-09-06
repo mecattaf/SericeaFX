@@ -25,6 +25,9 @@ fonts:
   rm ~/fonts.tar.gz
   fc-cache -v
 
+  # Add Emoji
+  pip install emoji-fzf
+
 cursors:
   # Download and set up the cursor theme
   mkdir -p ~/.icons
