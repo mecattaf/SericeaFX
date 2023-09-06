@@ -28,7 +28,7 @@ fonts:
 cursors:
   # Download and set up the cursor theme
   mkdir -p ~/.icons
-  curl -o ~/bibata.tar.gz -L https://github.com/mecattaf/cursors/releases/download/v1.0.0/Bibata-Cursors.tar.gz"
+  curl -o ~/bibata.tar.gz -L "https://github.com/mecattaf/cursors/releases/download/v1.0.0/Bibata-Cursors.tar.gz"
   tar -xf ~/bibata.tar.gz -C ~/.icons/
   rm ~/bibata.tar.gz
 
