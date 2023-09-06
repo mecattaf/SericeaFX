@@ -68,20 +68,13 @@ Run the following commands when you're logged into the operating system, to merg
 
 ```sh
 touch ~/.justfile
-cat /usr/share/ublue-os/just/main.just >> ~/.justfile
 cat /usr/share/ublue-os/just/custom.just >> ~/.justfile
 ```
 
 After doing that, you'll be able to run the following commands:
 
 - `just` - Show all tasks, more will be added in the future
-- `just bios` - Reboot into the system bios (Useful for dualbooting)
-- `just changelogs` - Show the changelogs of the pending update
-- Set up distroboxes for the following images:
-  - `just distrobox-boxkit`
-  - `just distrobox-debian`
-  - `just distrobox-opensuse`
-  - `just distrobox-ubuntu`
+- `just setup-sora` - Load dotfiles
 - `just setup-flatpaks` - Install all of the flatpaks declared in recipe.yml
 - `just setup-gaming` - Install Steam, Heroic Game Launcher, OBS Studio, Discord, Boatswain, Bottles, and ProtonUp-Qt. MangoHud is installed and enabled by default, hit right Shift-F12 to toggle
 - `just nix-me-up` - Install Nix with dnkmmr69420's Nix Silverblue install script
