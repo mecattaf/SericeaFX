@@ -1,11 +1,11 @@
-title: Welcome to Next
+title: Welcome to Sora
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to Next!"
+      title: "Welcome to Sora!"
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
