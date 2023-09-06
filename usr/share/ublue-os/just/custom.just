@@ -39,7 +39,6 @@ wallpapers:
   cp -r ~/.wallpapers/* ~/.local/share/wallpapers/
   rm -rf ~/.wallpapers
 
-
 setup-flatpaks:
   #!/usr/bin/env bash
   echo 'Installing flatpaks from the ublue recipe ...'
