@@ -26,7 +26,7 @@ fonts:
   fc-cache -v
 
   # Add Emoji
-  pip install emoji-fzf miniplayer
+  pip install emoji-fzf
 
 cursors:
   # Download and set up the cursor theme
