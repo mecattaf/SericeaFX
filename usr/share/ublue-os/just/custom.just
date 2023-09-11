@@ -3,6 +3,7 @@ setup-sora:
   just fonts
   just cursors
   just wallpapers
+  just flatpak-overrides-pwa
 
 dotfiles:
   # Clone and deploy dotfiles
@@ -41,6 +42,11 @@ wallpapers:
   mkdir -p ~/.local/share/wallpapers/
   cp -r ~/.wallpapers/* ~/.local/share/wallpapers/
   rm -rf ~/.wallpapers
+
+flatpak-overrides-pwa:
+  echo 'Giving browser permission to create PWAs (Progressive Web Apps)'
+  # Add for your favorite chromium-based browser
+  flatpak override --system --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome
 
 setup-flatpaks:
   #!/usr/bin/env bash
