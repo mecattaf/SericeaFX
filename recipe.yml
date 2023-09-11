@@ -59,8 +59,6 @@ rpm:
     - blueman
     - bluez-tools
     - glow
-    - zathura
-    - zathura-pdf-poppler
 
 firstboot:
   yafti: true
