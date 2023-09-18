@@ -47,10 +47,14 @@ flatpak-mods:
   echo 'Giving browser permission to create PWAs (Progressive Web Apps)'
   # Add for your favorite chromium-based browser
   flatpak override --system --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome
-  #flatpak override --filesystem=/var/home/$USER/.icons
-  #flatpak override --filesystem=/var/home/$USER/.themes
-  #flatpak override com.google.Chrome --filesystem=$HOME/.themes
-  #flatpak override --env=GTK_THEME=Base16
+    # Give Flatpak apps access to the custom icons and themes directories
+    flatpak override --filesystem=/var/home/$USER/.icons
+    flatpak override --filesystem=/var/home/$USER/.themes
+    # Give Google Chrome Flatpak specific access to the visuals directories
+    flatpak override com.google.Chrome --filesystem=$HOME/.themes
+    flatpak override com.google.Chrome --filesystem=$HOME/.icons
+    # Set GTK theme for all Flatpak apps
+    flatpak override --env=GTK_THEME=Base16
 
 setup-flatpaks:
   #!/usr/bin/env bash
