@@ -1,7 +1,7 @@
 name: sora
 base-image: ghcr.io/ublue-os/silverblue-main
 
-fedora-version: 38
+fedora-version: 39
 
 description: Personal Linux OS based on swayfx and fedora silverblue
 
