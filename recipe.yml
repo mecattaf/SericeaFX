@@ -68,3 +68,4 @@ firstboot:
     - io.mgba.mGBA
     - io.github.realmazharhussain.GdmSettings
     - org.videolan.VLC
+    - org.ppsspp.PPSSPP
