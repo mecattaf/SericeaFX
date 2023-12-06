@@ -69,3 +69,8 @@ firstboot:
     - io.github.realmazharhussain.GdmSettings
     - org.videolan.VLC
     - org.ppsspp.PPSSPP
+    - com.obsproject.Studio
+    - com.obsproject.Studio.Plugin.OBSVkCapture
+    # if program is not captured by obs:
+    # flatpak override --share=network <APP ID>
+    - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
