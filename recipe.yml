@@ -13,6 +13,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%FEDORA_VERSION%/swayfx-swayfx-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tokariew/glow/repo/fedora-%FEDORA_VERSION%/tokariew-glow-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shel/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
 
   remove:
     - firefox
@@ -49,6 +50,7 @@ rpm:
     - swappy
     - fzf
     - azote
+    - nwg-look
     - udiskie
     - network-manager-applet
     - xdg-desktop-portal
