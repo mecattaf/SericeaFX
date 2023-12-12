@@ -17,7 +17,7 @@ echo "Cloning Neovim configuration..."
 git clone https://github.com/mecattaf/nvim ~/.config/nvim
 
 # Copy theme from ~/dotfiles/theme
-cp -r ~/dotfiles/theme/* ~/.themes/
+cp -r ~/dotfiles/themes/* ~/.themes/
 
 # Copy fonts from ~/dotfiles/fonts
 echo "Setting up fonts..."
