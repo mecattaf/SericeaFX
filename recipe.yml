@@ -78,4 +78,3 @@ firstboot:
     # flatpak override --share=network <APP ID>
     - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
     - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
-    - net.mkiol.SpeechNote
