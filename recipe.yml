@@ -56,6 +56,7 @@ rpm:
     - xdg-user-dirs
     - gnome-keyring
     - gh
+    - gcc
     - blueman
     - bluez-tools
     - glow
