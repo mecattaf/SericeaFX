@@ -74,3 +74,4 @@ firstboot:
     # if program is not captured by obs:
     # flatpak override --share=network <APP ID>
     - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
+    - net.mkiol.SpeechNote
