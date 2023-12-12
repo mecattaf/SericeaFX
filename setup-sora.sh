@@ -12,6 +12,10 @@ mkdir -p ~/.themes/
 cp -r ~/dotfiles/bin/* ~/.local/share/bin/
 cp -r ~/dotfiles/config/* ~/.config/
 
+# Clone Neovim configuration
+echo "Cloning Neovim configuration..."
+git clone https://github.com/mecattaf/nvim ~/.config/nvim
+
 # Copy theme from ~/dotfiles/theme
 cp -r ~/dotfiles/theme/* ~/.themes/
 
@@ -44,12 +48,12 @@ sudo flatpak override com.google.Chrome --filesystem=$HOME/.icons
 sudo flatpak override --env=GTK_THEME=Catppuccin-Mocha-Standard-Green-Dark
 
 # setup-flatpaks
-echo "Installing flatpaks from the ublue recipe..."
-flatpaks=$(yq -- '.firstboot.flatpaks[]' "/usr/share/ublue-os/recipe.yml")
-for pkg in $flatpaks; do
-    echo "Installing: ${pkg}"
-    flatpak install --user --noninteractive flathub $pkg
-done
+#echo "Installing flatpaks from the ublue recipe..."
+#flatpaks=$(yq -- '.firstboot.flatpaks[]' "/usr/share/ublue-os/recipe.yml")
+#for pkg in $flatpaks; do
+#    echo "Installing: ${pkg}"
+#    flatpak install --user --noninteractive flathub $pkg
+#done
 
 # Cleanup
 rm -rf ~/dotfiles
