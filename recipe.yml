@@ -59,6 +59,7 @@ rpm:
     - gnome-keyring
     - gh
     - gcc
+    - g++
     - blueman
     - bluez-tools
     - glow
