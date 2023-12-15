@@ -48,12 +48,17 @@ sudo flatpak override com.google.Chrome --filesystem=$HOME/.icons
 sudo flatpak override --env=GTK_THEME=Catppuccin-Mocha-Standard-Green-Dark
 
 # setup-flatpaks
-#echo "Installing flatpaks from the ublue recipe..."
-#flatpaks=$(yq -- '.firstboot.flatpaks[]' "/usr/share/ublue-os/recipe.yml")
-#for pkg in $flatpaks; do
-#    echo "Installing: ${pkg}"
-#    flatpak install --user --noninteractive flathub $pkg
-#done
+echo "Installing flatpaks from the ublue recipe..."
+flatpaks=$(yq -- '.firstboot.flatpaks[]' "/usr/share/ublue-os/recipe.yml")
+for pkg in $flatpaks; do
+    echo "Installing: ${pkg}"
+    flatpak install --user --noninteractive flathub $pkg
+done
 
 # Cleanup
 rm -rf ~/dotfiles
+
+# Fix to load nvim-treesitter
+sudo ln -s /usr/bin/ld.bfd /usr/local/bin/ld
+
+# Add full fonts download, find old script in custom.just file
