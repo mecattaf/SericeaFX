@@ -62,8 +62,7 @@ rpm:
     - blueman
     - bluez-tools
     - glow
-    - qt5-wayland 
-    - qt6-wayland
+    - qt6-qtwayland
 
 firstboot:
   yafti: false
