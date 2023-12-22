@@ -39,14 +39,6 @@ mkdir -p ~/.local/share/wallpapers/
 cp -r ~/.wallpapers/* ~/.local/share/wallpapers/
 rm -rf ~/.wallpapers
 
-# flatpak-mods (requires sudo)
-echo "Configuring Flatpak modifications..."
-sudo flatpak override --filesystem=/var/home/$USER/.icons
-sudo flatpak override --filesystem=/var/home/$USER/.themes
-sudo flatpak override com.google.Chrome --filesystem=$HOME/.themes
-sudo flatpak override com.google.Chrome --filesystem=$HOME/.icons
-sudo flatpak override --env=GTK_THEME=Catppuccin-Mocha-Standard-Green-Dark
-
 # setup-flatpaks
 echo "Installing flatpaks from the ublue recipe..."
 flatpaks=$(yq -- '.firstboot.flatpaks[]' "/usr/share/ublue-os/recipe.yml")
@@ -55,10 +47,15 @@ for pkg in $flatpaks; do
     flatpak install --user --noninteractive flathub $pkg
 done
 
+# flatpak-mods 
+echo "Configuring Flatpak modifications..."
+flatpak override --user --env=GTK_THEME=Catppuccin-Mocha-Standard-Green-Dark
+flatpak override --user --filesystem=~/.local/share/applications:create --filesystem=~/.local/share/icons:create com.google.Chrome
+flatpak override --user --filesystem=~/.local/share/applications --filesystem=~/.local/share/icons com.google.Chrome
+flatpak override --user --filesystem=~/.icons --filesystem=~/.themes com.google.Chrome
+
 # Cleanup
 rm -rf ~/dotfiles
 
 # Fix to load nvim-treesitter
 sudo ln -s /usr/bin/ld.bfd /usr/local/bin/ld
-
-# Add full fonts download, find old script in custom.just file
