@@ -21,7 +21,6 @@ rpm:
     - virtualbox-guest-additions
     - toolbox
     - nvtop
-    # - THOMAS remove unwanted packages from here
 
   install:
     - python3-pip
