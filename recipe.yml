@@ -63,6 +63,8 @@ rpm:
     - bluez-tools
     - glow
     - qt6-qtwayland
+    - pipewire-media-session
+    - wf-recorder
 
 firstboot:
   yafti: false
