@@ -59,3 +59,12 @@ rm -rf ~/dotfiles
 
 # Fix to load nvim-treesitter
 sudo ln -s /usr/bin/ld.bfd /usr/local/bin/ld
+
+# Adding extra fonts
+mkdir -p ~/.local/share/fonts
+curl -o ~/fonts.tar.gz -L "https://github.com/mecattaf/fonts/archive/refs/tags/nerd.tar.gz"
+tar -xf ~/fonts.tar.gz -C ~/.local/share/fonts
+mv ~/.local/share/fonts/fonts-nerd/* ~/.local/share/fonts/
+rm -rf ~/.local/share/fonts/fonts-nerd/
+rm ~/fonts.tar.gz
+fc-cache -v
