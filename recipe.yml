@@ -63,9 +63,11 @@ rpm:
     - blueman
     - bluez-tools
     - glow
+    - qt5-wayland 
+    - qt6-wayland
 
 firstboot:
-  yafti: true
+  yafti: false
   flatpaks:
     - com.google.Chrome
     - org.desmume.DeSmuME
