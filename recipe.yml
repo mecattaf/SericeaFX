@@ -61,9 +61,22 @@ rpm:
     - g++
     - blueman
     - bluez-tools
+    - sox
     - glow
-    - qt6-qtwayland
     - wf-recorder
+
+    # qt stuff
+    - qt5-qtgraphicaleffects
+    - qt5-qtquickcontrols
+    - qt5-qtquickcontrols2
+    - qt5-qtwayland
+    - qt6-qtwayland
+    - qt5ct
+    - qt6ct
+    - qt5-qtsvg
+    - kvantum
+
+    # Add more packages from here, and copy structure: https://github.com/Heus-Sueh/Viper-OS/blob/live/config/modules_config/packages.yml
 
 firstboot:
   yafti: false
