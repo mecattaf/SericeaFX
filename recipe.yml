@@ -64,7 +64,6 @@ rpm:
     - sox
     - glow
     - wf-recorder
-    - wtype
 
     # qt stuff
     - qt5-qtgraphicaleffects
