@@ -95,3 +95,4 @@ firstboot:
     - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
     - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
     - net.mkiol.SpeechNote
+    - io.bassi.Amberol
