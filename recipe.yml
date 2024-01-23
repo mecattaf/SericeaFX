@@ -65,6 +65,7 @@ rpm:
     - sox
     - glow
     - wf-recorder
+    - yt-dlp
 
     # qt stuff
     - qt5-qtgraphicaleffects
