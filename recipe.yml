@@ -57,6 +57,8 @@ rpm:
     - xdg-user-dirs
     - gnome-keyring
     - gh
+    - mr
+    - vcsh
     - stow
     - gcc
     - g++
