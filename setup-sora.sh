@@ -3,6 +3,9 @@
 # setup-sora
 echo "Setting up Sora..."
 
+# install dotdrop
+# pip install dotdrop
+
 # dotfiles
 echo "Deploying dotfiles..."
 git clone https://github.com/mecattaf/dotfiles ~/dotfiles
