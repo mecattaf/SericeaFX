@@ -68,6 +68,7 @@ rpm:
     - glow
     - wf-recorder
     - yt-dlp
+    - aria2
 
     # qt stuff
     - qt5-qtgraphicaleffects
