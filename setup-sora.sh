@@ -3,8 +3,7 @@
 # setup-sora
 echo "Setting up Sora..."
 
-# install dotdrop
-# pip install dotdrop
+# process directories with vcsh and mr
 
 # dotfiles
 echo "Deploying dotfiles..."
