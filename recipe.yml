@@ -50,6 +50,8 @@ rpm:
     - fzf
     - azote
     - nwg-look
+    - zathura
+    - zathura-pdf-poppler
     - udiskie
     - network-manager-applet
     - xdg-desktop-portal
@@ -59,7 +61,6 @@ rpm:
     - gh
     - mr
     - vcsh
-    - stow
     - gcc
     - g++
     - blueman
