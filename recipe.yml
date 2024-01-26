@@ -66,6 +66,7 @@ rpm:
     - blueman
     - bluez-tools
     - mpd
+    - mpdris2
     - ncmpcpp
     - sox
     - glow
