@@ -65,6 +65,8 @@ rpm:
     - g++
     - blueman
     - bluez-tools
+    - mpd
+    - ncmpcpp
     - sox
     - glow
     - wf-recorder
