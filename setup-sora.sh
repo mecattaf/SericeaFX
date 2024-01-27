@@ -30,18 +30,16 @@ stow -d ~/dotfiles -t ~/.config nvim
 
 # Setting up cursors
 echo "Setting up cursors..."
-curl -o ~/bibata.tar.gz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata.tar.gz"
-tar -xf ~/bibata.tar.gz -C ~/.icons/
-rm ~/bibata.tar.gz
+curl -o ~/bibata.tar.xz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata.tar.xz"
+tar -xf ~/bibata.tar.xz -C ~/.icons
+rm ~/bibata.tar.xz
 
-# Deploying wallpapers
 echo "Deploying wallpapers..."
-git clone https://github.com/mecattaf/wallpapers ~/.wallpapers
-cp -r ~/.wallpapers/* ~/.local/share/wallpapers/
-rm -rf ~/.wallpapers
+git clone https://github.com/mecattaf/wallpapers ~/.local/share/wallpapers
 
 # Installing flatpaks from the ublue recipe
 echo "Installing flatpaks from the ublue recipe..."
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpaks=$(yq -- '.firstboot.flatpaks[]' "/usr/share/ublue-os/recipe.yml")
 for pkg in $flatpaks; do
     echo "Installing: ${pkg}"
