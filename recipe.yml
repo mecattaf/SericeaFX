@@ -64,6 +64,7 @@ rpm:
     - g++
     - blueman
     - bluez-tools
+    - pavucontrol
     - mpd
     - mpdris2
     - ncmpcpp
