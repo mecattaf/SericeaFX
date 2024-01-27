@@ -103,3 +103,5 @@ firstboot:
     - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
     - net.mkiol.SpeechNote
     - io.bassi.Amberol
+    - com.hunterwittenborn.Celeste
+    - org.mpdevil.mpdevil
