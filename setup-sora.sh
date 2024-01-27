@@ -22,12 +22,8 @@ mkdir -p ~/.local/share/wallpapers
 # Deploying dotfiles using GNU Stow
 echo "Deploying dotfiles..."
 stow -d ~/dotfiles -t ~/.local/share/bin bin
+stow -d ~/dotfiles/config -t ~/.config *
 stow -d ~/dotfiles -t ~/.themes themes
-
-# Deploying each configuration in the config folder
-for d in ~/dotfiles/config/*/ ; do
-    stow -d ~/dotfiles/config -t ~/.config "$(basename $d)"
-done
 
 # Deploying Neovim configuration
 stow -d ~/dotfiles -t ~/.config nvim
