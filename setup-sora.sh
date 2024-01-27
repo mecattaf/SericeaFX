@@ -21,16 +21,10 @@ git clone https://github.com/mecattaf/nvim ~/.config/nvim
 # Copy theme from ~/dotfiles/theme
 cp -r ~/dotfiles/themes/* ~/.themes/
 
-# Copy fonts from ~/dotfiles/fonts
-echo "Setting up fonts..."
-cp -r ~/dotfiles/fonts/* ~/.local/share/fonts/
-fc-cache -v
-pip install emoji-fzf
-
 # cursors
 echo "Setting up cursors..."
 mkdir -p ~/.icons
-curl -o ~/bibata.tar.gz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.3/Bibata.tar.gz"
+curl -o ~/bibata.tar.gz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.5/Bibata.tar.gz"
 tar -xf ~/bibata.tar.gz -C ~/.icons/
 rm ~/bibata.tar.gz
 
@@ -70,3 +64,4 @@ mv ~/.local/share/fonts/fonts-nerd/* ~/.local/share/fonts/
 rm -rf ~/.local/share/fonts/fonts-nerd/
 rm ~/fonts.tar.gz
 fc-cache -v
+pip install emoji-fzf
