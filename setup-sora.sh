@@ -34,7 +34,7 @@ stow -d ~/dotfiles -t ~/.config nvim
 
 # Setting up cursors
 echo "Setting up cursors..."
-curl -o ~/bibata.tar.gz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.5/Bibata.tar.gz"
+curl -o ~/bibata.tar.gz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata.tar.gz"
 tar -xf ~/bibata.tar.gz -C ~/.icons/
 rm ~/bibata.tar.gz
 
