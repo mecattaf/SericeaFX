@@ -15,7 +15,7 @@
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mecattaf/sora:latest
+  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mecattaf/sora:latest
   ```
 - Reboot again to complete the installation
   ```
