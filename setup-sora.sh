@@ -3,10 +3,6 @@
 # Setup Sora
 echo "Setting up Sora..."
 
-# Authenticate with GitHub
-echo "Authenticating with GitHub..."
-gh auth login
-
 # Cloning dotfiles repository
 echo "Cloning dotfiles..."
 git clone https://github.com/mecattaf/dotfiles ~/dotfiles
@@ -75,5 +71,9 @@ rm -rf ~/.local/share/fonts/fonts-nerd/
 rm ~/fonts.tar.gz
 fc-cache -v
 pip install emoji-fzf
+
+# Authenticate with GitHub
+echo "Authenticating with GitHub..."
+gh auth login
 
 echo "Setup completed."
