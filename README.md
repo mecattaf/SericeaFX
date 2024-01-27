@@ -2,22 +2,86 @@
 
 [![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
 
-This is my personal linux config based on uBlue Linux. For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
-See the [Make Your Own -page in the documentation](https://ublue.it/making-your-own/) for quick setup instructions for setting up your own repository based on this template.
+## Install
 
-## Installation
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sora:latest
+  ```
 
-To rebase an existing Silverblue/Kinoite installation to the latest build:
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
+- Then rebase to the signed image, like so:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mecattaf/sora:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+  ```
 
+### Set up dotfiles for my device
 ```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sora:latest
+git clone https://github.com/mecattaf/sora
+cd sora
+./setup-sora.sh
 ```
 
-This repository builds date tags as well, so if you want to rebase to a particular day's build:
+### Manual setup using GUI
 
-```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mecattaf/sora:20230403
-```
+- Run `nwg-look` and set up appearance settings
+- Run `azote` and pick wallpaper
+
+### Google Chrome
+
+1) In `chrome://settings`:
+
+System
+
+- Continue running background apps when Google Chrome is closed ❌
+- Use hardware acceleration when available ✅
+
+Appearance
+
+- Theme: All Black - Full Dark Theme/Black Theme ❌
+- Show home button ❌
+- Show bookmarks bar ✅
+- Show images on tab hover preview cards ❌
+- Use system title bars and borders ✅
+
+2) In`chrome://flags`:
+
+- Chrome Refresh 2023 ✅
+- Preferred Ozone Platform: `Wayland`
+- WebRTC PipeWire support ✅
+- Native Client ✅
+- WebGL Developer Extensions ✅
+- WebGL Draft Extensions✅
+- Toggle hardware accelerated H.264 video encoding for Cast Streaming ✅
+- Toggle hardware accelerated VP8 video encoding for Cast Streaming ✅
+
+3) Add PWA's manually
+
+The shortcuts will be created in ~/.local/share/applications
+
+Go to Top-right menu > Save and share > Create Shortcut and make sure to enable “Open as Window”
+
+| Application      | URL                                        |
+| ---------------- | ------------------------------------------ |
+| ChatGPT          | [https://chat.openai.com/](https://chat.openai.com/)        |
+| Google Drive     | [https://drive.google.com/drive/u/0/](https://drive.google.com/drive/u/0/)  |
+| Linear           | [https://linear.app/](https://linear.app/)              |
+| Superhuman       | [https://mail.superhuman.com/](https://mail.superhuman.com/)      |
+| Loom             | [https://www.loom.com/home](https://www.loom.com/home)          |
+| SoundCloud       | [https://soundcloud.com/](https://soundcloud.com/)            |
+| Notion Calendar  | [https://calendar.notion.so/](https://calendar.notion.so/)    |
+| WhatsApp Web     | [https://web.whatsapp.com/](https://web.whatsapp.com/)        |
+| Notion           | [https://notion.so/](https://notion.so/)                  |
+| Google Photos    | [https://photos.google.com/](https://photos.google.com/)      |
+
+
 
 ## Verification
 
@@ -32,3 +96,5 @@ If you're forking this repo, the uBlue website has [instructions](https://ublue.
 ```shell
 sudo rpm-ostree rebase fedora:fedora/38/x86_64/silverblue
 ```
+
+
