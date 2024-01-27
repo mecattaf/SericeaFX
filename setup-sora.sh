@@ -7,10 +7,6 @@ echo "Setting up Sora..."
 echo "Cloning dotfiles..."
 git clone https://github.com/mecattaf/dotfiles ~/dotfiles
 
-# Cloning Neovim configuration
-echo "Cloning Neovim configuration..."
-git clone https://github.com/mecattaf/nvim ~/dotfiles/nvim
-
 # Creating necessary directories
 mkdir -p ~/.local/share/bin
 mkdir -p ~/.config
@@ -22,11 +18,8 @@ mkdir -p ~/.local/share/wallpapers
 # Deploying dotfiles using GNU Stow
 echo "Deploying dotfiles..."
 stow -d ~/dotfiles -t ~/.local/share/bin bin
-stow -d ~/dotfiles/config -t ~/.config *
+stow -d ~/dotfiles -t ~/.config config
 stow -d ~/dotfiles -t ~/.themes themes
-
-# Deploying Neovim configuration
-stow -d ~/dotfiles -t ~/.config nvim
 
 # Setting up cursors
 echo "Setting up cursors..."
@@ -34,6 +27,7 @@ curl -o ~/bibata.tar.xz -L "https://github.com/ful1e5/Bibata_Cursor/releases/dow
 tar -xf ~/bibata.tar.xz -C ~/.icons
 rm ~/bibata.tar.xz
 
+# Deploying wallpapers
 echo "Deploying wallpapers..."
 git clone https://github.com/mecattaf/wallpapers ~/.local/share/wallpapers
 
