@@ -14,8 +14,8 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tokariew/glow/repo/fedora-%FEDORA_VERSION%/tokariew-glow-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/maveonair/jetbrains-mono-nerd-fonts/repo/fedora-%FEDORA_VERSION%/maveonair/jetbrains-mono-nerd-fonts-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/maveonair/jetbrains-mono-nerd-fonts/repo/fedora-%FEDORA_VERSION%/maveonair-jetbrains-mono-nerd-fonts-fedora-%FEDORA_VERSION%.repo
+
 
   remove:
     - firefox
