@@ -15,6 +15,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/tokariew/glow/repo/fedora-%FEDORA_VERSION%/tokariew-glow-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/maveonair/jetbrains-mono-nerd-fonts/repo/fedora-%FEDORA_VERSION%/maveonair-jetbrains-mono-nerd-fonts-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%FEDORA_VERSION%/peterwu-rendezvous-fedora-%FEDORA_VERSION%.repo
 
 
   remove:
@@ -77,6 +78,7 @@ rpm:
     - wf-recorder
     - yt-dlp
     - aria2
+    - 
 
     # qt stuff
     - qt5-qtgraphicaleffects
@@ -88,8 +90,7 @@ rpm:
     - qt6ct
     - qt5-qtsvg
     - kvantum
-
-    # Add more packages from here, and copy structure: https://github.com/Heus-Sueh/Viper-OS/blob/live/config/modules_config/packages.yml
+    - bibata-cursor-themes
 
 firstboot:
   yafti: false
