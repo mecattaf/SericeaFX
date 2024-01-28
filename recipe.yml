@@ -15,8 +15,6 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/tokariew/glow/repo/fedora-%FEDORA_VERSION%/tokariew-glow-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%FEDORA_VERSION%/peterwu-rendezvous-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%FEDORA_VERSION%/che-nerd-fonts-fedora-%FEDORA_VERSION%.repo
-
 
   remove:
     - firefox
@@ -76,7 +74,6 @@ rpm:
     - yt-dlp
     - aria2
     - bibata-cursor-themes
-    - nerd-fonts
 
     # drivers
     - mesa-dri-drivers
