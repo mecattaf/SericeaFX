@@ -15,6 +15,9 @@ mkdir -p ~/.icons
 mkdir -p ~/.local/share/fonts
 mkdir -p ~/.local/share/wallpapers
 
+# Clear preexisting directories
+rm -rf ~/.config/gtk-3.0
+
 # Deploying dotfiles using GNU Stow
 echo "Deploying dotfiles..."
 stow -d ~/dotfiles -t ~/.local/share/bin bin
