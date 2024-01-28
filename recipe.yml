@@ -81,8 +81,8 @@ rpm:
     - bibata-cursor-themes
 
     # drivers
-   - mesa-dri-drivers
-   - mesa-vulkan-drivers
+    - mesa-dri-drivers
+    - mesa-vulkan-drivers
 
     # qt stuff
     - qt5-qtgraphicaleffects
