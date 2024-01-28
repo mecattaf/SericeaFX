@@ -78,7 +78,11 @@ rpm:
     - wf-recorder
     - yt-dlp
     - aria2
-    - 
+    - bibata-cursor-themes
+
+    # drivers
+   - mesa-dri-drivers
+   - mesa-vulkan-drivers
 
     # qt stuff
     - qt5-qtgraphicaleffects
@@ -89,8 +93,6 @@ rpm:
     - qt5ct
     - qt6ct
     - qt5-qtsvg
-    - kvantum
-    - bibata-cursor-themes
 
 firstboot:
   yafti: false
