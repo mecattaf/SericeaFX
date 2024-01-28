@@ -57,8 +57,8 @@ rm ~/fonts.tar.gz
 fc-cache -v
 pip install emoji-fzf
 
-# Authenticate with GitHub
-echo "Authenticating with GitHub..."
-gh auth login
+# Add git credentials
+git config --global user.name "mecattaf"
+git config --global user.email "thomasmecattaf@gmail.com"
 
 echo "Setup completed."
