@@ -24,12 +24,6 @@ stow -d ~/dotfiles -t ~/.local/share/bin bin
 stow -d ~/dotfiles -t ~/.config config
 stow -d ~/dotfiles -t ~/.themes themes
 
-# Setting up cursors
-echo "Setting up cursors..."
-curl -o ~/bibata.tar.xz -L "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata.tar.xz"
-tar -xf ~/bibata.tar.xz -C ~/.icons
-rm ~/bibata.tar.xz
-
 # Deploying wallpapers
 echo "Deploying wallpapers..."
 git clone https://github.com/mecattaf/wallpapers ~/.local/share/wallpapers
