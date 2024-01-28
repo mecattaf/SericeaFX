@@ -63,7 +63,6 @@ rpm:
     - xdg-desktop-portal-wlr
     - xdg-user-dirs
     - gnome-keyring
-    - gh
     - stow
     - gcc
     - g++
