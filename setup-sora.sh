@@ -3,6 +3,30 @@
 # Setup Sora
 echo "Setting up Sora..."
 
+# Ask for GitHub Personal Access Token
+while true; do
+    read -sp "Enter your GitHub Personal Access Token: " pat
+    echo
+    read -sp "Confirm your GitHub Personal Access Token: " pat_confirm
+    echo
+
+    if [ "$pat" = "$pat_confirm" ]; then
+        break
+    else
+        echo "Tokens do not match. Please try again."
+    fi
+done
+
+# Set Git identity (This is for commit authorship, not GitHub authentication)
+git config --global user.name "mecattaf"
+git config --global user.email "thomasmecattaf@gmail.com"
+
+# Configure Git to use 'store' credential helper
+git config --global credential.helper store
+
+# Manually add credentials to the credential store
+echo "https://mecattaf:$pat@github.com" > ~/.git-credentials
+
 # Cloning dotfiles repository
 echo "Cloning dotfiles..."
 git clone https://github.com/mecattaf/dotfiles ~/dotfiles
