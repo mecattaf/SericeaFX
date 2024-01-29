@@ -32,11 +32,13 @@ echo "Cloning dotfiles..."
 git clone https://github.com/mecattaf/dotfiles ~/dotfiles
 
 # Creating necessary directories
-mkdir -p ~/.local/share/bin
 mkdir -p ~/.config
 mkdir -p ~/.themes
 mkdir -p ~/.icons
+mkdir -p ~/.local/share/applications
+mkdir -p ~/.local/share/bin
 mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/wallpapers
 
 # Clear preexisting directories
