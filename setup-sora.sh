@@ -40,6 +40,7 @@ mkdir -p ~/.local/share/bin
 mkdir -p ~/.local/share/fonts
 mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/wallpapers
+mkdir -p ~/Music/Recent
 
 # Clear preexisting directories
 rm -rf ~/.config/gtk-3.0
