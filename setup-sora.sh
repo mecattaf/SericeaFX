@@ -49,6 +49,7 @@ echo "Deploying dotfiles..."
 stow -d ~/dotfiles -t ~/.local/share/bin bin
 stow -d ~/dotfiles -t ~/.config config
 stow -d ~/dotfiles -t ~/.themes themes
+stow -d ~/dotfiles -t ~/.local/share/applications applications
 
 # Deploying wallpapers
 echo "Deploying wallpapers..."
