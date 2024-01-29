@@ -45,16 +45,21 @@ System
 
 Appearance
 
-- Theme: All Black - Full Dark Theme/Black Theme ❌
+- Theme: `All Black - Full Dark Theme/Black Theme`
+- Mode: `Dark`
 - Show home button ❌
-- Show bookmarks bar ✅
-- Show images on tab hover preview cards ❌
+- Show bookmarks bar ❌
+- Show images on tab hover preview cards ✅
 - Use system title bars and borders ✅
 
 2) In`chrome://flags`:
 
-- Chrome Refresh 2023 ✅
 - Preferred Ozone Platform: `Wayland`
+- Chrome Refresh 2023 ✅
+- Realbox Chrome Refresh 2023 ✅
+- Chrome WebUI Refresh 2023 ✅
+- Chrome Refresh 2023 New Tab Button ✅
+- Enable Display Compositor to use a new gpu thread ✅
 - WebRTC PipeWire support ✅
 - Native Client ✅
 - WebGL Developer Extensions ✅
