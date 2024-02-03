@@ -48,6 +48,7 @@ rpm:
     - neovim
     - kanshi
     - swappy
+    - wshowkeys
     - fzf
     - azote
     - nwg-look
