@@ -67,6 +67,7 @@ rpm:
     - bluez-tools
     - pavucontrol
     - mpd
+    - mpc
     - mpdris2
     - ncmpcpp
     - sox
