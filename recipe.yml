@@ -16,7 +16,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%FEDORA_VERSION%/peterwu-rendezvous-fedora-%FEDORA_VERSION%.repo
     - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-    - https://repo.charm.sh/yum/charm.repo
+    - https://raw.githubusercontent.com/ublue-os/bluefin/main/etc/yum.repos.d/charm.repo
 
   remove:
     - firefox
