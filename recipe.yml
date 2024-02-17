@@ -15,6 +15,8 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/tokariew/glow/repo/fedora-%FEDORA_VERSION%/tokariew-glow-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%FEDORA_VERSION%/peterwu-rendezvous-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/mecattaf/marp-cli/repo/fedora-%FEDORA_VERSION%/mecattaf-marp-cli-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/mecattaf/catppuccin-theme/repo/fedora-%FEDORA_VERSION%/mecattaf-catppuccin-theme-fedora-%FEDORA_VERSION%.repo
     - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
   remove:
@@ -79,6 +81,8 @@ rpm:
     - bibata-cursor-themes
     - tailscale
     - ripgrep
+    - marp-cli
+    - catppuccin-theme
 
     # drivers
     - mesa-dri-drivers
@@ -97,19 +101,26 @@ rpm:
 firstboot:
   yafti: false
   flatpaks:
+    # core
     - com.google.Chrome
+    - org.videolan.VLC
+
+    # investigate, flatpak is not useful
+    - io.github.realmazharhussain.GdmSettings
+
+    # gaming
     - org.desmume.DeSmuME
     - io.mgba.mGBA
-    - io.github.realmazharhussain.GdmSettings
-    - org.videolan.VLC
     - org.ppsspp.PPSSPP
-    - com.obsproject.Studio
-    - com.obsproject.Studio.Plugin.OBSVkCapture
-    # if program is not captured by obs:
-    # flatpak override --share=network <APP ID>
-    - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
-    - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
+
+    # GUI programs
     - net.mkiol.SpeechNote
     - io.bassi.Amberol
     - com.hunterwittenborn.Celeste
-    - org.mpdevil.mpdevil
+    
+    # if program is not captured by obs:
+    # flatpak override --share=network <APP ID>
+    - com.obsproject.Studio
+    - com.obsproject.Studio.Plugin.OBSVkCapture
+    - org.freedesktop.Platform.VulkanLayer.OBSVkCapture
+    - org.freedesktop.Platform.GStreamer.gstreamer-vaapi
