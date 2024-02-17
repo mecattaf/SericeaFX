@@ -78,7 +78,7 @@ rpm:
     - aria2
     - bibata-cursor-themes
     - tailscale
-    
+    - ripgrep
 
     # drivers
     - mesa-dri-drivers
