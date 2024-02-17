@@ -98,6 +98,16 @@ rpm:
     - qt6ct
     - qt5-qtsvg
 
+type: fonts
+fonts:
+  nerd-fonts:
+    - FiraCode # don't add "Nerd Font" suffix.
+    - Hack
+    - SourceCodePro
+    - Terminus
+    - JetBrainsMono
+    - NerdFontsSymbolsOnly
+
 firstboot:
   yafti: false
   flatpaks:
