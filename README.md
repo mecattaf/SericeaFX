@@ -33,6 +33,7 @@ cd sora
 
 - Run `nwg-look` and set up appearance settings
 - Run `azote` and pick wallpaper
+- Run 'nautilus' and set hidden files to "show"
 
 ### Google Chrome
 
