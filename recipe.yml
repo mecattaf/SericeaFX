@@ -82,7 +82,6 @@ rpm:
     - bibata-cursor-themes
     - tailscale
     - ripgrep
-    - marp-cli
     - catppuccin-theme
     - himalaya
 
