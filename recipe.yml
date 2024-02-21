@@ -70,6 +70,8 @@ rpm:
     - g++
     - blueman
     - bluez-tools
+    - iwd
+    # - iwgtk
     - pavucontrol
     - mpd
     - mpc
@@ -85,7 +87,7 @@ rpm:
     - ripgrep
     - catppuccin-theme
     - himalaya
-    - swayosd
+    # - swayosd
     - marp-cli
 
     # drivers
