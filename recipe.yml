@@ -51,6 +51,7 @@ rpm:
     - wl-clipboard
     - neovim
     - ripgrep
+    - pandoc
     - kanshi
     - swappy
     - wshowkeys
