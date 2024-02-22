@@ -16,8 +16,6 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%FEDORA_VERSION%/tofik-nwg-shell-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%FEDORA_VERSION%/peterwu-rendezvous-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/atim/himalaya/repo/fedora-%FEDORA_VERSION%/atim-himalaya-fedora-%FEDORA_VERSION%.repo 
-    - https://copr.fedorainfracloud.org/coprs/mecattaf/marp-cli/repo/fedora-%FEDORA_VERSION%/mecattaf-marp-cli-fedora-%FEDORA_VERSION%.repo
-    #- https://copr.fedorainfracloud.org/coprs/mecattaf/swayosd/repo/fedora-%FEDORA_VERSION%/mecattaf-swayosd-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/mecattaf/iwgtk/repo/fedora-%FEDORA_VERSION%/mecattaf-iwgtk-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/mecattaf/catppuccin-theme/repo/fedora-%FEDORA_VERSION%/mecattaf-catppuccin-theme-fedora-%FEDORA_VERSION%.repo
     - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -52,6 +50,7 @@ rpm:
     - remmina
     - wl-clipboard
     - neovim
+    - ripgrep
     - kanshi
     - swappy
     - wshowkeys
@@ -85,11 +84,8 @@ rpm:
     - aria2
     - bibata-cursor-themes
     - tailscale
-    - ripgrep
     - catppuccin-theme
     - himalaya
-    #- swayosd
-    - marp-cli
 
     # drivers
     - mesa-dri-drivers
