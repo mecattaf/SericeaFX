@@ -38,6 +38,7 @@ rpm:
     - lxpolkit
     - polkit-gnome
     - alacritty
+    - kitty
     - clipman
     - gammastep
     - light
