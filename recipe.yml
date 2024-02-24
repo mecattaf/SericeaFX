@@ -70,6 +70,7 @@ rpm:
     - stow
     - gcc
     - g++
+    - nautilus
     - blueman
     - bluez-tools
     - iwd
