@@ -19,6 +19,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/mecattaf/iwgtk/repo/fedora-%FEDORA_VERSION%/mecattaf-iwgtk-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/mecattaf/catppuccin-theme/repo/fedora-%FEDORA_VERSION%/mecattaf-catppuccin-theme-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/mecattaf/chezmoi/repo/fedora-%FEDORA_VERSION%/mecattaf-chezmoi-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/mecattaf/marp-cli/repo/fedora-%FEDORA_VERSION%/mecattaf-marp-cli-fedora-%FEDORA_VERSION%.repo
     - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
   remove:
@@ -92,10 +93,12 @@ rpm:
     - catppuccin-theme
     - himalaya
     - chezmoi
+    - marp-cli
 
     # drivers
     - mesa-dri-drivers
     - mesa-vulkan-drivers
+    - vulkan-validation-layers
 
     # qt stuff
     - qt5-qtgraphicaleffects
