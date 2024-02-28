@@ -18,6 +18,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/atim/himalaya/repo/fedora-%FEDORA_VERSION%/atim-himalaya-fedora-%FEDORA_VERSION%.repo 
     - https://copr.fedorainfracloud.org/coprs/mecattaf/iwgtk/repo/fedora-%FEDORA_VERSION%/mecattaf-iwgtk-fedora-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/mecattaf/catppuccin-theme/repo/fedora-%FEDORA_VERSION%/mecattaf-catppuccin-theme-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/mecattaf/chezmoi/repo/fedora-%FEDORA_VERSION%/mecattaf-chezmoi-fedora-%FEDORA_VERSION%.repo
     - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
   remove:
@@ -90,6 +91,7 @@ rpm:
     - tailscale
     - catppuccin-theme
     - himalaya
+    - chezmoi
 
     # drivers
     - mesa-dri-drivers
