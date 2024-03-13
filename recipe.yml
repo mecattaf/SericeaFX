@@ -88,8 +88,6 @@ rpm:
     - tailscale
     - catppuccin-theme
     - himalaya
-    - chezmoi
-    - marp-cli
 
     # drivers
     - mesa-dri-drivers
